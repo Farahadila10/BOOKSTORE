@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUSTAKA SYAFIE BOOKSTORE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1, .logo p {
+            margin: 0;
+        }
+
+        .logo-icon {
+            font-size: 30px;
+            margin-right: 10px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input {
+            padding: 8px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .search-bar button {
+            padding: 8px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-icons .icon {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            text-align: center;
+        }
+
+        .header-icons .icon i {
+            font-size: 18px;
+        }
+
+        .header-icons .icon span {
+            display: block;
+            font-size: 12px;
+        }
+
+        #main {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        #main h1, #main h2, #main p {
+            margin-bottom: 20px;
+        }
+
+        #main img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            display: block;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        footer ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-media {
+            margin: 10px 0;
+        }
+
+        .social-media a {
+            color: white;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="home.php">
+                <i class="fas fa-book-reader logo-icon"></i>
+                <div>
+                    <h1>PUSTAKA SYAFIE</h1>
+                    <p>BOOKSTORE</p>
+                </div>
+            </a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for books, authors, or categories...">
+            <button>Search</button>
+        </div>
+        <div class="header-icons">
+            <a href="login.php" class="icon">
+                <i class="fas fa-user"></i>
+                <span>Login</span>
+            </a>
+            <a href="cart.php" class="icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Cart</span>
+            </a>
+            <a href="wishlist.php" class="icon">
+                <i class="fas fa-heart"></i>
+                <span>Wishlist</span>
+            </a>
+            <a href="accInformation.php" class="icon">
+                <i class="fas fa-cogs"></i>
+                <span>My Account</span>
+            </a>
+            <a href="contact.php" class="icon">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <div id="main">
+        <h1>About Us</h1>
+        <div class="image main">
+            
+        </div>
+        <h2>THE PUSTAKA SYAFIE STORY</h2>
+        <p>"Pustaka Syafie" is a quaint bookstore nestled in a bustling town, known for its rich collection of Islamic literature and educational materials. Founded by Syafie Ahmad in the late 1990s, the store began as a small shop catering to local students and religious scholars...</p>
+
+        <h2>VISION</h2>
+        <p>To serve people and to grow with society, symbiotically.</p>
+
+        <h2>MISSION</h2>
+        <p>To be a leading dynamic entity. To provide value-for-money products and quality services to our customers...</p>
+
+        <h2>OUR HISTORY</h2>
+        <p>Pustaka Syafie is a well-established bookstore with deep roots in the world of Islamic literature and academic resources. Founded several decades ago, it was established with the mission of promoting knowledge and Islamic values through high-quality publications. Over the years, it has built a reputation for being a trusted source of:
+
+            1. **Islamic Literature**: Offering a wide range of books on Quranic studies, Hadith, Fiqh, Tafsir, and other branches of Islamic sciences. These resources cater to scholars, students, and general readers.
+            
+            2. **Academic Resources**: Serving the educational needs of schools, universities, and individuals with textbooks, reference materials, and scholarly works.
+            
+            3. **General Reading**: Providing books on various topics, including self-development, family, health, and social issues, all aligned with Islamic principles.
+            
+            Pustaka Syafie has grown alongside its community, becoming a cultural hub for those seeking authentic and enriching knowledge. The bookstore is known for its curated selection, including works from renowned Islamic scholars and contemporary authors. Its reputation is also bolstered by its dedication to customer service, ensuring readers receive guidance in selecting appropriate books.
+            
+            In recent years, Pustaka Syafie has embraced technological advancements, culminating in its initiative to launch an **online store**. This step marks a significant evolution in its history, aiming to provide greater accessibility and convenience to its loyal customers while reaching a broader audience, both locally and internationally. The online store reflects the bookstore's commitment to adapting to modern needs while preserving its mission of knowledge dissemination.</p>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <ul>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="terms.html">Terms & Condition</a></li>
+            <li><a href="userManual.html">User Manual</a></li>
+        </ul>
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>Copyright © 2024 PUSTAKA SYAFIE BOOK CO. (MALAYSIA) SDN. BHD. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUSTAKA SYAFIE BOOKSTORE</title>
+    <link rel="stylesheet" href="styles.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+	
+
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+    <div class="logo">
+        <a href="home.php">
+            <i class="fas fa-book-reader logo-icon"></i>
+            <div>
+                <h1>PUSTAKA SYAFIE</h1>
+                <p>BOOKSTORE</p>
+            </div>
+        </a>
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search for books, authors, or categories..." />
+        <button>Search</button>
+    </div>
+    <div class="header-icons">
+        <a href="login.php" class="icon">
+            <i class="fas fa-user"></i>
+            <span>Login</span>
+        </a>
+        <a href="cart.php" class="icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Cart</span>
+        </a>
+        <a href="wishlist.php" class="icon">
+            <i class="fas fa-heart"></i>
+            <span>Wishlist</span>
+        </a>
+        <a href="accInformation.php" class="icon">
+            <i class="fas fa-cogs"></i>
+            <span>My Account</span>
+        </a>
+        <a href="contact.php" class="icon">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+    </div>
+</header>
+  <style>
+    /* Basic Reset and General Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #FAF6E3;
+      color: #333;
+      text-align: center;
+    }
+
+    /* Main Container Styles */
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      position: relative; /* For positioning the back button */
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    /* Video Container Styles */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 ratio */
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      background: #000;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+    }
+
+    .video-container:hover {
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Text Styling */
+    p {
+      font-size: 1.1rem;
+      margin-top: 20px;
+      color: #fff;
+    }
+
+    /* Button Styling */
+    .button {
+      background-color: #333;
+      color: white;
+      padding: 12px 25px;
+      font-size: 18px;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #555;
+    }
+
+    /* Back Button Styling */
+    .back-button {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background-color: #555;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #333;
+    }
+
+    /* Mobile Responsiveness */
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>User Manual</h2>
+    <p>Watch the video below to learn how to use the system step-by-step:</p>
+
+    <div class="video-container">
+      <!-- YouTube video embedded using the provided link -->
+      <iframe src="https://www.youtube.com/embed/S7zwjFZ_Rn4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <p>If you have any further questions, please contact our support team for assistance.</p>
+
+  </div>
+
+   <!-- Footer Section (Continued) -->
+   <footer>
+    <div class="footer-content">
+        <ul>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="terms.html">Terms & Condition</a></li>
+            <li><a href="userManual.html">User Manual</a></li>
+        </ul>
+        <div class="social-media">
+            <a href="#"></a> | <a href="#"></a> | <a href="#"></a>
+        </div>
+  <div class="col-md-6">
+    <p>Copyright © 2024 PUSTAKA SYAFIE BOOK CO. (MALAYSIA) SDN. BHD. All Rights Reserved.</p>
+  </div>
+    </div>
+</footer>
+
+  <!-- Add Bootstrap or other scripts if needed -->
+  <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

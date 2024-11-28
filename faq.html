@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUSTAKA SYAFIE BOOKSTORE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F9F9F9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            flex-wrap: wrap;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        header .logo-icon {
+            font-size: 36px;
+            margin-right: 10px;
+        }
+
+        header .logo h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        header .logo p {
+            font-size: 14px;
+            margin-top: -5px;
+        }
+
+        .search-bar {
+            flex-grow: 1;
+            display: flex;
+            margin: 10px 20px;
+            max-width: 500px;
+        }
+
+        .search-bar input {
+            flex-grow: 1;
+            padding: 8px 12px;
+            border-radius: 5px 0 0 5px;
+            border: 1px solid #ddd;
+        }
+
+        .search-bar button {
+            padding: 8px 16px;
+            border: none;
+            background-color: #F2C885;
+            color: #333;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .header-icons .icon {
+            text-decoration: none;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 12px;
+        }
+
+        .header-icons .icon i {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        /* Main Content Styles */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #333;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .faq-item h3 {
+            font-size: 24px;
+            color: #705C53;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+            font-weight: bold;
+        }
+
+        .faq-item h3:hover {
+            color: #705C53;
+        }
+
+        .faq-item p {
+            font-size: 16px;
+            color: #666;
+            display: none;
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+
+        .faq-item p.show {
+            display: block;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer ul {
+            list-style-type: none;
+            margin-bottom: 15px;
+        }
+
+        footer ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        footer ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        footer .social-media {
+            margin: 15px 0;
+        }
+
+        footer .social-media a {
+            text-decoration: none;
+            color: white;
+            margin: 0 5px;
+            font-size: 16px;
+        }
+
+        footer p {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .search-bar {
+                margin: 10px 0;
+                flex-grow: unset;
+            }
+
+            .header-icons {
+                justify-content: center;
+            }
+
+            footer ul li {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="home.php">
+                <i class="fas fa-book-reader logo-icon"></i>
+                <div>
+                    <h1>PUSTAKA SYAFIE</h1>
+                    <p>BOOKSTORE</p>
+                </div>
+            </a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for books, authors, or categories...">
+            <button>Search</button>
+        </div>
+        <div class="header-icons">
+            <a href="login.php" class="icon">
+                <i class="fas fa-user"></i>
+                <span>Login</span>
+            </a>
+            <a href="cart.php" class="icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Cart</span>
+            </a>
+            <a href="wishlist.php" class="icon">
+                <i class="fas fa-heart"></i>
+                <span>Wishlist</span>
+            </a>
+            <a href="accInformation.php" class="icon">
+                <i class="fas fa-cogs"></i>
+                <span>My Account</span>
+            </a>
+            <a href="contact.php" class="icon">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer(1)">1. What is the Pustaka Syafie Bookstore Inventory Management System?</h3>
+            <p id="answer-1">The Pustaka Syafie Bookstore System is a web application that helps manage the stock of books and related materials available at the bookstore. It allows users to check book availability and enables admins to track, manage, and restock inventory efficiently.</p>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer(2)">2. Who can use the inventory management system?</h3>
+            <p id="answer-2">The system is designed for both customers and administrators. Customers can view available books and check their availability, while administrators have access to inventory management tools, such as adding or updating stock levels and reviewing book usage.</p>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer(3)">3. Do I need an account to use the system?</h3>
+            <p id="answer-3">Yes, both admins and users need an account to log in. Admins have access to inventory management tools, while users can browse the bookstore, check the availability of books, and place orders.</p>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer(4)">4. How can I check the availability of books in stock?</h3>
+            <p id="answer-4">Customers can view available books directly from the bookstore’s main inventory page without logging in. This page shows the current stock levels of the books.</p>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer(5)">5. How do admins restock books?</h3>
+            <p id="answer-5">Admins can access the admin dashboard after logging in. From there, they can view current stock levels, add new books, or update quantities to restock the books as needed.</p>
+        </div>
+
+        <!-- FAQ Item 6 -->
+        <div class="faq-item">
+            <h3 onclick="toggleAnswer(6)">6. Who can I contact if I have additional questions or need support?</h3>
+            <p id="answer-6">If you have further questions, please reach out to the Pustaka Syafie support team or the designated administrator. They can help with any inquiries related to the bookstore and the system.</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <ul>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="userManual.html">User Manual</a></li>
+        </ul>
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>Copyright © 2024 PUSTAKA SYAFIE BOOK CO. (MALAYSIA) SDN. BHD. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleAnswer(index) {
+            const answer = document.getElementById('answer-' + index);
+            answer.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

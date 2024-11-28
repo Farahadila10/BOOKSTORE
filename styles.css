@@ -1,0 +1,650 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.logo-icon {
+    font-size: 2rem;
+    color: #ff6600;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.logo p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #ccc;
+}
+.logo-image {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    flex-wrap: wrap; /* Allows wrapping for responsive design */
+}
+
+header .logo h1 {
+    font-size: 2rem;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    font-size: 1rem;
+}
+/* Header Icons */
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-icons a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.header-icons a:hover {
+    color: #ff6600;
+}
+
+.header-icons a i {
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+
+/* Search Bar */
+header .search-bar {
+    flex: 1; /* Allows the search bar to grow and center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+}
+
+header .search-bar input {
+    width: 60%;
+    max-width: 500px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+header .search-bar button {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+}
+
+header .search-bar button:hover {
+    background-color: #e65c00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    header .search-bar {
+        margin-top: 10px;
+    }
+}
+
+
+/* Banner Section */
+.banner {
+    background: url('images/wall.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+}
+
+.banner h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.banner button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.banner button:hover {
+    background-color: #e65c00;
+}
+
+/* Buy Now Button Styling */
+.buy-now-btn {
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.buy-now-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Wishlist Button Styling */
+.wishlist-btn {
+    background-color: #f8f9fa; /* Light background */
+    color: #dc3545; /* Red color for the heart */
+    padding: 10px 20px; /* Button padding */
+    border: 1px solid #dc3545; /* Border with same red color */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.wishlist-btn:hover {
+    background-color: #dc3545; /* Red background on hover */
+    color: white; /* White text on hover */
+}
+
+.wishlist-btn i {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/* Popular Categories Section */
+.categories {
+    padding: 40px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.categories h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.category-carousel {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.category-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin: 10px;
+    flex-basis: 20%;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.category-item:hover {
+    transform: scale(1.05);
+}
+
+.category-item p {
+    font-weight: bold;
+}
+
+/* Featured Products Section */
+.featured-products {
+    padding: 40px;
+    text-align: center;
+}
+
+.featured-products h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    text-align: center;
+    margin: 10px;
+    flex-basis: 30%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item img {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.product-item p:first-child {
+    color: #ff6600;
+}
+.add-to-cart-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.add-to-cart-btn:hover {
+    background-color: #218838;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    color: white;
+}
+
+footer .social-media a:hover {
+    color: #ff6600;
+}
+
+footer .newsletter {
+    margin-top: 20px;
+}
+
+footer .newsletter label {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+footer .newsletter input {
+    padding: 10px;
+    margin-right: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+}
+
+footer .newsletter button {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+
+footer .newsletter button:hover {
+    background-color: #e65c00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .category-carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-list {
+        flex-direction: column;
+    }
+
+    .product-item {
+        flex-basis: 100%;
+    }
+}
+/* Customer Reviews Section */
+.customer-reviews {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.customer-reviews h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.reviews {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.review-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.review-item h4 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff6600;
+}
+
+/* Special Offers Section */
+.special-offers {
+    background-color: #f4f4f4;
+    padding: 40px;
+    text-align: center;
+}
+
+.special-offers h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.offer-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.offer-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: scale(1.05);
+}
+
+.offer-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.offer-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.offer-card button {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.offer-card button:hover {
+    background-color: #e65c00;
+}
+
+/* Back-to-Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff6600;
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: #e65c00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .reviews {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .offer-cards {
+        flex-direction: column;
+    }
+
+    .offer-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .back-to-top {
+        font-size: 1.2rem;
+        padding: 10px 15px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
